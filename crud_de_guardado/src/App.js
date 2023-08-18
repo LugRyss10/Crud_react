@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+import logo from "./Logo app.jpeg"
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -155,6 +155,10 @@ class App extends React.Component {
             </tbody>
           </Table>
         </Container>
+
+         <div className="logo-container">
+          <img src={logo} alt="Logo" className="logo" />
+        </div>
 
         <Modal isOpen={this.state.modalActualizar}>
           <ModalHeader>
