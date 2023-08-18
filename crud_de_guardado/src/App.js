@@ -118,7 +118,7 @@ class App extends React.Component {
         <Container>
         <br />
           <Button color="success" onClick={()=>this.mostrarModalInsertar()}>Crear</Button>
-          <Button color="success" onClick={this.imprimirListado}>Imprimir Listado</Button>
+          <Button id="boton-imprimir" class="btn btn-primary" color="success" onClick={this.imprimirListado}>Imprimir Listado</Button>
           <br />
           <br />
           <Table>
@@ -230,15 +230,18 @@ class App extends React.Component {
 
           <ModalFooter>
             <Button
+            id="boton-especifico" class="btn btn-primary"
               color="primary"
               onClick={() => this.editar(this.state.form)}
             >
               Confirmar
             </Button>
             <Button
+              id="boton-cancelar" class="btn btn-primary"
               color="danger"
               onClick={() => this.cerrarModalActualizar()}
             >
+              
               Cancelar
             </Button>
           </ModalFooter>
@@ -316,6 +319,7 @@ class App extends React.Component {
 
           <ModalFooter>
             <Button
+              id="boton-insertar" class="btn btn-primary"
               color="primary"
               onClick={() => this.insertar()}
             >
